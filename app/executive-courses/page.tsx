@@ -25,7 +25,7 @@ const testimonials = [
 
 const futureCohorts = [
     { term: "March 2027", note: "2. – 3. March 2027" },
-    { term: "June 2027", note: "Exact dates to be announced" },
+    { term: "June 2027", note: "24. – 25. June 2027" },
 ];
 
 export default function ExecutiveCourses() {
