@@ -222,8 +222,8 @@ export default function SurveyForm() {
 
                     <div className="form-group">
                         <label>
-                            Would you be interested in, and have time for, a get-together at a bar
-                            on Thursday evening in St. Gallen? *
+                            Join fellow participants for drinks and networking at a bar in St.
+                            Gallen on Thursday evening? *
                         </label>
                         {["Yes, I'd love to join", "Maybe, depending on timing", "No, I can't make it"].map(
                             (opt) => (
