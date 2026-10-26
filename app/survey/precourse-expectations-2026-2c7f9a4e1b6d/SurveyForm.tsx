@@ -18,6 +18,7 @@ export default function SurveyForm() {
         email: prefillEmail,
         expectations: "",
         question: "",
+        barEvening: "",
     });
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -43,7 +44,8 @@ export default function SurveyForm() {
             message:
                 `Course: ${COURSE_LABEL}\n\n` +
                 `— Expectations —\n${form.expectations}\n\n` +
-                `— Specific Question / Problem —\n${form.question}`,
+                `— Specific Question / Problem —\n${form.question}\n\n` +
+                `— Bar get-together Thursday evening, St. Gallen —\n${form.barEvening}`,
         };
 
         try {
@@ -105,7 +107,7 @@ export default function SurveyForm() {
                     <button
                         onClick={() => {
                             setSubmitted(false);
-                            setForm({ name: "", email: "", expectations: "", question: "" });
+                            setForm({ name: "", email: "", expectations: "", question: "", barEvening: "" });
                         }}
                         className="btn"
                         style={{
@@ -149,7 +151,7 @@ export default function SurveyForm() {
                             lineHeight: 1.6,
                         }}
                     >
-                        A short two-question survey so we can tailor the sessions to you. Name and
+                        A short short survey so we can tailor the sessions to you. Name and
                         email are optional — leave them blank if you prefer to respond anonymously.
                     </p>
 
@@ -216,6 +218,40 @@ export default function SurveyForm() {
                                 setForm((prev) => ({ ...prev, question: e.target.value }))
                             }
                         />
+                    </div>
+
+                    <div className="form-group">
+                        <label>
+                            Would you be interested in, and have time for, a get-together at a bar
+                            on Thursday evening in St. Gallen? *
+                        </label>
+                        {["Yes, I'd love to join", "Maybe, depending on timing", "No, I can't make it"].map(
+                            (opt) => (
+                                <label
+                                    key={opt}
+                                    style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "0.5rem",
+                                        fontWeight: 400,
+                                        marginTop: "0.5rem",
+                                    }}
+                                >
+                                    <input
+                                        type="radio"
+                                        name="survey-bar"
+                                        required
+                                        value={opt}
+                                        checked={form.barEvening === opt}
+                                        onChange={() =>
+                                            setForm((prev) => ({ ...prev, barEvening: opt }))
+                                        }
+                                        style={{ width: "auto" }}
+                                    />
+                                    {opt}
+                                </label>
+                            ),
+                        )}
                     </div>
 
                     <button
