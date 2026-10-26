@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 const COURSE_LABEL =
-    "The AI Agent Workforce: How to Automatize Organizational Workflows (8. and 9th June 2026)";
+    "The AI Agent Workforce: How to Automatize Organizational Workflows (12. and 13th November 2026)";
 
 export default function SurveyForm() {
     const searchParams = useSearchParams();
@@ -100,7 +100,7 @@ export default function SurveyForm() {
                     </h3>
                     <p style={{ color: "var(--hsg-muted)", lineHeight: 1.7 }}>
                         Your responses help shape the course. We'll address your question and
-                        expectations during the sessions on 8. and 9th June 2026.
+                        expectations during the sessions on 12. and 13th November 2026.
                     </p>
                     <button
                         onClick={() => {
@@ -187,7 +187,7 @@ export default function SurveyForm() {
                                 &ldquo;The AI Agent Workforce: How to Automatize Organizational
                                 Workflows&rdquo;
                             </em>{" "}
-                            (8. and 9th June 2026)? *
+                            (12. and 13th November 2026)? *
                         </label>
                         <textarea
                             id="survey-expectations"
