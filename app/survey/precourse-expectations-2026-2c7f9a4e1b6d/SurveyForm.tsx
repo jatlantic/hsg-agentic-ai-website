@@ -45,7 +45,7 @@ export default function SurveyForm() {
                 `Course: ${COURSE_LABEL}\n\n` +
                 `— Expectations —\n${form.expectations}\n\n` +
                 `— Specific Question / Problem —\n${form.question}\n\n` +
-                `— Bar get-together Thursday evening, St. Gallen —\n${form.barEvening}`,
+                `— Bar get-together Thursday evening (12.11.26), St. Gallen —\n${form.barEvening}`,
         };
 
         try {
@@ -223,7 +223,7 @@ export default function SurveyForm() {
                     <div className="form-group">
                         <label>
                             Join fellow participants for drinks and networking at a bar in St.
-                            Gallen on Thursday evening? *
+                            Gallen on Thursday evening (12.11.26)? *
                         </label>
                         {["Yes, I'd love to join", "Maybe, depending on timing", "No, I can't make it"].map(
                             (opt) => (
